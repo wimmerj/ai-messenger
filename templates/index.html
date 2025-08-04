@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Messenger - Monica.im</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤖 AI Messenger</h1>
+            <p>Chatujte s umělou inteligencí Monica.im</p>
+            <button id="clearHistoryBtn" class="clear-btn">🗑️ Vymazat historii</button>
+        </header>
+
+        <div class="chat-container">
+            <div id="messagesContainer" class="messages-container">
+                <div class="welcome-message">
+                    <p>👋 Vítejte! Napište zprávu a začněte konverzaci s AI.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Napište svou zprávu zde..." 
+                    rows="1"
+                    maxlength="2000"
+                ></textarea>
+                <button id="sendBtn" class="send-btn">📤</button>
+            </div>
+            <div class="char-counter">
+                <span id="charCount">0</span>/2000
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>AI zpracovává vaši zprávu...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
