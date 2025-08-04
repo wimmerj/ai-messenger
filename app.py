@@ -37,7 +37,7 @@ def send_message():
         
         # Příprava dat pro Monica API
         api_data = {
-            "model": "gpt-4",
+            "model": "gpt-4o-mini",
             "messages": [
                 {"role": "system", "content": "Jsi pomocný AI asistent. Odpovídej v češtině."},
                 {"role": "user", "content": user_message}
